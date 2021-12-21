@@ -9,6 +9,10 @@ const Container = styled.div`
   background: #fff;
   border-radius: 10px;
   box-shadow: 2px 2px 16px #0008;
+
+  @media (max-width: 480px) {
+    width: 90%;
+  }
 `;
 
 function ModalDefault(props) {

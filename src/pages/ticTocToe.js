@@ -24,7 +24,30 @@ const LogoPlay = styled.img`
   position: absolute;
   top: 50px;
   left: 50px;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
+
+const LogoPlayMobile = styled.h1`
+  display: none;
+
+  @media (max-width: 480px) {
+    display: block;
+    width: fit-content;
+    max-width: 70%;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px #fff dashed;
+    font-family: "Rock Salt", cursive;
+    font-size: 48px;
+    color: #fff;
+    text-align: center;
+    line-height: 72px;
+  }
+`;
+
 const CurrentPlayer = styled.p`
   font-family: "Rock Salt", cursive;
   font-size: 48px;
@@ -51,6 +74,7 @@ function TicTocToe() {
   return (
     <Container>
       <LogoPlay src={logo} />
+      <LogoPlayMobile>Jogo da Velha</LogoPlayMobile>
       <CurrentPlayer>Joador : {player === "1" ? "O" : "X"}</CurrentPlayer>
       <Board player={player} playing={playing} setPlaying={setPlaying} changeBoard={changeBoard} newPlay={newPlay} />
     </Container>

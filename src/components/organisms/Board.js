@@ -20,10 +20,15 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 480px) {
+    width: 95vw;
+    height: 95vw;
+  }
 `;
 const VirtualBoard = styled.div`
-  width: 632px;
-  height: 632px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
   border-radius: 10px;
   background: #47a3f8;
   display: flex;
@@ -209,6 +214,6 @@ function Board({ playing, setPlaying, changeBoard, newPlay }) {
       )}
     </>
   );
-};
+}
 
 export default Board;

@@ -33,6 +33,10 @@ const Item = styled.button`
 
 const Icon = styled.img`
   width: 104px;
+
+  @media (max-width: 480px) {
+    width: 48px;
+  }
 `;
 function Square(props) {
   const { player } = useParams();
@@ -42,6 +46,6 @@ function Square(props) {
       {props.move === "X" && <Icon src={icon_playX} />}
     </Item>
   );
-};
+}
 
 export default Square;
